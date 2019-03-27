@@ -1,0 +1,79 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: Brush Script MT, cursive;
+}
+
+#etchASketch {
+    position: absolute;
+    margin: auto;
+    padding: none;
+    top: 5%;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 80% 10%;
+    background: red;
+    border-radius: 3%;
+}   
+
+h1 {
+    font-size: 2em;
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    color: gold;
+}
+
+#container {
+    border: 1px solid black;
+    grid-row: 2;
+    grid-column: 2;
+    background-color: lightgray;
+}
+
+#clear {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#resize {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#resize, #clear {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    background-color: darkgray;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-weight: bold;
+    border: .5px solid black;
+    box-shadow: 0 8px 16px 0 rgba(126, 116, 116, 0.363), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+#clear:active, #resize:active {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    transform: translateY(2px);
+}
+
+.cell {
+    margin: 0;
+    padding: 0;
+}
