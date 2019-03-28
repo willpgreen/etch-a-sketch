@@ -1,5 +1,6 @@
 // create reference to container and set up grid
 const container = document.querySelector('#container');
+const etch = document.querySelector('#etchASketch');
 container.style.display = 'grid';
 
 // function to color cells randomly
@@ -48,10 +49,16 @@ resize.addEventListener('click', () => {
 
 // clear button
 let clear = document.querySelector('#clear');
-clear.addEventListener('click', () => {
+clear.addEventListener('click', (e) => {
+    e.preventDefault();
     const cells = document.querySelectorAll('.cell');
     cells.forEach(cell => cell.style.background = 'lightgray');
+    etch.classList.add("apply-shake");
 });
+
+etch.addEventListener("animationend", (e) => {
+    etch.classList.remove("apply-shake");
+})
 
 let crazy = document.querySelector('#crazy');
 crazy.addEventListener('click', () => {
