@@ -2,6 +2,14 @@
 const container = document.querySelector('#container');
 container.style.display = 'grid';
 
+// function to color cells randomly
+function crazyCell() {
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    this.style.background = `rgb(${red}, ${blue}, ${green})`;
+}
+
 // function to color cells black
 function colorCell() {
     this.style.background = 'black';
@@ -44,6 +52,20 @@ clear.addEventListener('click', () => {
     const cells = document.querySelectorAll('.cell');
     cells.forEach(cell => cell.style.background = 'lightgray');
 });
+
+let crazy = document.querySelector('#crazy');
+crazy.addEventListener('click', () => {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => cell.removeEventListener('mouseenter', colorCell));
+    cells.forEach(cell => cell.addEventListener('mouseenter', crazyCell));
+});
+
+let back2Black = document.querySelector('#black');
+back2Black.addEventListener('click', () => {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => cell.removeEventListener('mouseenter', crazyCell));
+    cells.forEach(cell => cell.addEventListener('mouseenter', colorCell));
+})
 
 // create initial grid
 resizeGrid();

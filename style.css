@@ -49,7 +49,17 @@ h1 {
     grid-row: 3;
 }
 
-#resize, #clear {
+#crazy {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#black {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#resize, #clear, #crazy, #black {
     text-decoration: none;
     outline: none;
     cursor: pointer;
