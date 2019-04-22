@@ -1,5 +1,5 @@
 # Etch A Sketch
-The old toy. I'm pretty sure everyone who was a kid in the past 60 years has played with one of these. 
+The old toy. I'm pretty sure everyone who was a kid in the past 60 years has played with one of these. Hover your mouse over the screen to draw. Hit Clear to reset the screen. Hit Resize to change the dimensions of the 'pixels.' Or just Go Crazy if you're tired of the black and white.
 
 ## Background
 This was a project for a Web Development course I took, and my first experience with JavaScript and gave me exposure to manipulating the DOM. The assignment was to create a "browser version of something between a sketchpad and an Etch-A-Sketch."
